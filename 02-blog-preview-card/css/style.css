@@ -128,7 +128,8 @@ body {
 @media all and (max-width: 1440px) {
 }
 
-@media all and (max-width: 768px);
+@media all and (max-width: 768px) {
+}
 
 @media all and (max-with: 640px) {
   body {
