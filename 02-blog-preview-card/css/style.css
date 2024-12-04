@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --Yellow: #f4d04e;
+
+  --White: #ffffff;
+
+  --Gray500: #6b6b6b;
+  --Gray950: #121212;
+
+  --border-radius-large: 24px;
+  --border-radius-medium: 12px;
+  --border-radius-small: 4px;
+}
+
+body {
+  background: var(--Yellow);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  /* padding: 0 150px; */
+  font-size: 16px;
+  font-family: "Figtree";
+}
+
+.blog-preview-card {
+  background: var(--White);
+  padding: 18px;
+  margin: 0 auto;
+  max-width: 350px;
+  border: 1px solid var(--Gray950);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  box-shadow: 7px 7px 0 var(--Gray950);
+  margin-bottom: 13px;
+}
+
+.image {
+  width: 100%;
+  height: 45%;
+  border-radius: var(--border-radius-medium);
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.learning {
+  color: var(--Gray950);
+  background: var(--Yellow);
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 16px;
+  display: inline-block;
+  border-radius: var(--border-radius-small);
+}
+
+.published {
+  color: var(--Gray950);
+  font-size: 12px;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.blog-preview-card h1 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 16px;
+}
+
+.blog-preview-card h1:hover {
+  color: var(--Yellow);
+}
+
+.blog-preview-card .text {
+  font-size: 14px;
+  color: var(--Gray500);
+  margin-top: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.instructor {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.instr-pic {
+  width: 27px;
+}
+
+.instr-pic img {
+  width: 100%;
+}
+.instr-name {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+@media all and (max-width: 1440px) {
+}
+
+@media all and (max-width: 768px);
+
+@media all and (max-with: 640px) {
+  body {
+    font-size: 14px;
+  }
+
+  .blog-preview-card {
+    max-width: 320px;
+    padding: 10px;
+  }
+  .blog-preview-card h1 {
+    font-size: 18px;
+  }
+
+  .blog-preview-card .text {
+    font-size: 12px;
+  }
+}
