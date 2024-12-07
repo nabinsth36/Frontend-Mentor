@@ -21,21 +21,147 @@ a {
   text-decoration: none;
 }
 
-body {
+:root {
+  --DarkCyan: #3c8067;
+  --Cream: #f2ebe3;
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: #6c7289;
+  --White: #ffffff;
+  --border-radius-large: 24px;
+  --border-radius-medium: 12px;
+  --border-radius-small: 6px;
 }
 
-:root {
-  --DarkCyan: hsl(158, 36%, 37%);
-  --Cream: hsl(30, 38%, 92%);
-  --VeryDarkBlue: hsl(212, 21%, 14%);
-  --DarkGrayishBlue: hsl(228, 12%, 48%);
-  --White: hsl(0, 0%, 100%);
+body {
+  background: var(--Cream);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat";
+  font-size: 13px;
+  color: var(--DarkGrayishBlue);
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 900px;
+}
+
+.product-card {
+  background: var(--White);
+  display: flex;
+
+  width: 60%;
+  border-radius: var(--border-radius-medium);
+  overflow: hidden;
+  margin-bottom: 13px;
+}
+
+.img-wrap {
+  min-width: 280px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.content-column {
+  min-width: 280px;
+  padding: 30px;
+}
+
+.category {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.content-column h1 {
+  font-family: "Fraunces";
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--VeryDarkBlue);
+  line-height: 1;
+  margin-top: 20px;
+}
+
+.content-column .text {
+  font-size: 13px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.price {
+  display: flex;
+  margin-top: 20px;
+  justify-content: left;
+  gap: 20px;
+  align-items: center;
+}
+
+.discounted-price {
+  font-family: "Fraunces";
+  font-size: 28px;
+  color: var(--DarkCyan);
+  font-weight: 800;
+}
+
+.add-to-cart {
+  display: flex;
+  background: var(--DarkCyan);
+  color: var(--White);
+  margin-top: 32px;
+  padding: 10px 15px;
+  border-radius: var(--border-radius-small);
+  display: flex;
+  justify-content: center;
+}
+
+.cart-img {
+  width: 13px;
+  margin-right: 6px;
+}
+
+.add-to-cart:hover {
+  background: var(--VeryDarkBlue);
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 900px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+  }
+
+  .img-wrap {
+    min-width: 375px;
+    height: 240px;
+  }
+
+  .img-wrap img {
+    width: 100%;
+
+    object-fit: cover;
+  }
 }
