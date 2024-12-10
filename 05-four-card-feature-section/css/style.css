@@ -135,11 +135,11 @@ header {
   border-top: 3px solid var(--Cyan);
 }
 
-.card:nth-child(2) {
+.card-middle .card:nth-child(1) {
   border-top: 3px solid var(--Red);
 }
 
-.card:nth-child(3) {
+.card-middle .card:nth-child(2) {
   border-top: 3px solid var(--Orange);
 }
 
