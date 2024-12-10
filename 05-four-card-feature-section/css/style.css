@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  /* Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+  background: var(--VeryLightGray);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 13px;
+  font-family: "Poppins";
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main h2 {
+  font-size: 28px;
+  font-weight: 200;
+  color: var(--GrayishBlue);
+}
+
+main h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--VeryDarkBlue);
+}
+
+.text {
+  color: var(--GrayishBlue);
+  margin-top: 12px;
+}
+
+header {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 16px;
+}
+
+.card .text {
+  font-size: 12px;
+}
+
+.card-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cards .card:nth-child(2),
+.cards .card:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0px 6px 6px var(--GrayishBlue);
+  position: relative;
+}
+
+.card img {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.card:first-child {
+  border-top: 3px solid var(--Cyan);
+}
+
+.card:nth-child(2) {
+  border-top: 3px solid var(--Red);
+}
+
+.card:nth-child(3) {
+  border-top: 3px solid var(--Orange);
+}
+
+.card:last-child {
+  border-top: 3px solid var(--Blue);
+}
+
+@media all and (max-width: 640px) {
+  main {
+    margin: 20px auto;
+  }
+  main h1,
+  main h2 {
+    font-size: 24px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
