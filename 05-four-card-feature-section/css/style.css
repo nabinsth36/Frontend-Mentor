@@ -149,7 +149,10 @@ header {
   border-top: 3px solid var(--Blue);
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 375px) {
+  body {
+    width: 350px;
+  }
   main {
     margin: 20px auto;
   }
@@ -160,6 +163,9 @@ header {
 
   .cards {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    width: 200px;
   }
 }
